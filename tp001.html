@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://127.0.0.1:5500/meus%20template/tp001.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market list</title>
+    <style>
+        div#cb1{
+            display: table;/*procurar significado*/
+            background: #FDED2A;
+            height: 150px;
+            width: 100%;
+
+        }
+        div#cb2{
+            display: table-cell;/*procurar significado*/
+            vertical-align: middle;
+            text-align: left;
+            font: normal 60px Helvetica;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #EA202C;
+            padding: 10px;
+        }        
+        div#menulist1{
+            display: flex;
+            font: normal 15px Verdana;
+            color: white;
+        }
+        div#itemslist1{
+            background-color: rgb(230, 135, 10);
+            height: 60px;
+            width: 50%;
+            float: left;
+            text-align: left;
+            padding-left: 40px;
+        }
+        div#listqtd1{
+            background-color:rgb(230, 135, 10);
+            height: 60px;
+            width: 50%;
+            float: right;
+            text-align: center;
+            direction: rtl;
+        }
+        div#listdiv1{
+            display: inline;
+            font: normal 20px Verdana;
+        }
+        div#lista1{
+            background-color: white;
+            float: left;
+            width: 50%;
+        }
+        div#divqtd1{
+            background-color: white;
+            float: right;
+            direction: rtl;
+            width: 50%;
+        }
+        
+        /*div#bdC01{
+            display: table;
+            background: white;
+            width: 100%;
+            height: 600px;
+            margin-top: 10px;
+
+        }
+        div#bdC02{
+            display: table-cell;
+            text-align: left;
+            vertical-align: middle;
+            font: normal 20px Arial;
+        }*/  
+        body{
+            background-color: rgb(255, 180, 19);
+        }
+        div#additem1{
+            width: 100%;
+            display: flex;
+        }
+        input#input1{
+            width: 50%;
+            float: left;
+            height: 60px;
+        }
+        input#inputqtd1{
+            width: 15%;
+            float:left;
+            height: 60px;
+        }
+        input#bt1{
+            width: 40%;
+            float: right;
+            height: 66px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cb1"><!--Cabeçalho pg1-->
+        <div id="cb2">
+            <h1 id="cb2_h1">Shop list</h1>
+        </div>
+    </div> 
+    <div id="additem1"><!--Caixa de Pesquisa-->
+        <input type="text" name="pesquisa" id="input1" placeholder="Insira um item à lista..." maxlength="20">
+        <input type="number" name="qtd" id="inputqtd1" value="1" min="1" max="1000">
+        <input type="button" value="Adicionar" id="bt1">
+    </div>
+    <div id="menulist1">
+        <div id="itemslist1">
+            <h2>Itens</h2>
+        </div>
+        <div id="listqtd1">
+            <h2>Quantidade</h2>
+        </div>
+    </div>
+    <div id="listdiv1">
+        <div id="lista1">
+            <ul type="none">
+                <li id="l1">Vazio<hr>
+                </li><li id="l2">Vazio<hr>
+                </li><li id="l3">Vazio<hr>
+                </li><li id="l4">Vazio<hr>
+                </li><li id="l5">Vazio<hr>
+                </li><li id="l6">Vazio<hr>
+                </li><li id="l7">Vazio<hr>
+                </li><li id="l8">Vazio<hr>
+                </li><li id="l9">Vazio<hr>
+                </li><li id="l10">Vazio
+            </li></ul>
+        </div>
+        <div id="divqtd1">
+            <ul type="none" id="qtd1">
+                <li id="qtd1">1000<hr>
+                </li><li id="qtd2">0<hr>
+                </li><li id="qtd3">0<hr>
+                </li><li id="qtd4">0<hr>
+                </li><li id="qtd5">0<hr>
+                </li><li id="qtd6">0<hr>
+                </li><li id="qtd7">0<hr>
+                </li><li id="qtd8">0<hr>
+                </li><li id="qtd9">0<hr>
+                </li><li id="qtd10">0
+            </li></ul>
+        </div>
+    </div>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
