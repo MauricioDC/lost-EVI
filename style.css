@@ -27,6 +27,7 @@ h1 {
 .p_main_one {
     font: normal 16px Courier New;
     text-align: justify;
-
 }
-
+a { 
+    color: inherit; 
+} 
